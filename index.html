@@ -3,92 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Edição digital de Oscar Guerreiro, dobrado para banda, com grade e partes instrumentais.">
-  <title>Oscar Guerreiro | Partituras digitais</title>
+  <meta name="description" content="Catálogo digital de obras, partituras e fontes do Projeto Resgate.">
+  <title>Projeto Resgate | Acervo musical</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
+  <header class="site-header">
     <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="./">Projeto Resgate</a>
-      <a class="nav-link" href="https://github.com/projetoresgate/projetoresgate.github.io">GitHub</a>
+      <a class="brand" href="./"><span class="brand-mark">PR</span> Projeto Resgate</a>
+      <a class="nav-link" href="https://github.com/ProjetoResgate">Ver organização no GitHub</a>
     </nav>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Arquivo musical digital</p>
-        <h1>Oscar<br><em>Guerreiro</em></h1>
-        <p class="lead">Dobrado para banda, preservado em fontes LilyPond e partituras prontas para execução.</p>
-        <div class="actions">
-          <a class="button button-primary" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/blob/main/PDF/Grade.pdf?raw=1">Abrir a grade</a>
-          <a class="button button-quiet" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/tree/main/PDF">Ver todas as partes</a>
-        </div>
+    <div class="hero section-width">
+      <div>
+        <p class="eyebrow">Acervo musical digital</p>
+        <h1>Obras que<br><em>continuam tocando.</em></h1>
       </div>
-      <figure class="cover-frame">
-        <img src="https://raw.githubusercontent.com/ProjetoResgate/Oscar-Guerreiro/main/Outros%20Arquivos/Resgate.png" alt="Capa da obra Oscar Guerreiro">
-      </figure>
+      <p class="hero-intro">Um catálogo aberto de partituras, edições e fontes para bandas e músicos. Escolha uma obra para conhecer o material e abrir a partitura.</p>
     </div>
   </header>
 
   <main>
-    <section class="intro section-width">
-      <div class="section-label">01 / A edição</div>
-      <div>
-        <h2>Uma obra, um arquivo<br>aberto para o futuro.</h2>
-        <p>Esta edição digital reúne a grade geral e as partes instrumentais de <strong>Oscar Guerreiro</strong>, dobrado composto por <strong>Heráclio Guerreiro</strong>. O material foi editado a partir dos originais disponibilizados por João de Lila.</p>
-        <p class="muted">Editoração por Filipe Fonseca e Ronald Filho. Revisão por Filipe Fonseca.</p>
+    <section class="catalog section-width" id="obras">
+      <div class="section-heading">
+        <div class="section-label">01 / Obras</div>
+        <p>Selecione uma obra para ver seus materiais.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card is-selected" data-work="oscar">
+          <div class="work-top"><span class="work-index">01</span><span class="work-type">Dobrado · 2024</span></div>
+          <div class="work-body">
+            <p class="work-kicker">Heráclio Guerreiro</p>
+            <h2>Oscar<br><em>Guerreiro</em></h2>
+            <p>Grade geral e partes instrumentais para banda.</p>
+          </div>
+          <div class="work-bottom"><button class="select-work" type="button">Selecionar obra <span aria-hidden="true">→</span></button><a href="https://github.com/ProjetoResgate/Oscar-Guerreiro" class="repo-link" aria-label="Abrir repositório Oscar Guerreiro">GitHub ↗</a></div>
+        </article>
+
+        <article class="work-card work-card-empty">
+          <div class="work-top"><span class="work-index">02</span><span class="work-type">Próxima obra</span></div>
+          <div class="work-body"><h2>Seu próximo<br><em>projeto.</em></h2><p>Adicione aqui outra obra do acervo.</p></div>
+          <div class="work-bottom"><a class="select-work text-link" href="https://github.com/ProjetoResgate">Ver repositórios <span aria-hidden="true">↗</span></a></div>
+        </article>
       </div>
     </section>
 
-    <section class="resources section-width">
-      <div class="section-label">02 / Materiais</div>
-      <div class="resource-grid">
-        <a class="resource-card featured" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/blob/main/PDF/Grade.pdf?raw=1">
-          <span class="card-number">01</span>
-          <span class="card-title">Grade geral</span>
-          <span class="card-link">Abrir PDF <span aria-hidden="true">↗</span></span>
-        </a>
-        <a class="resource-card" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/blob/main/PDF/Capa.pdf?raw=1">
-          <span class="card-number">02</span>
-          <span class="card-title">Capa da partitura</span>
-          <span class="card-link">Abrir PDF <span aria-hidden="true">↗</span></span>
-        </a>
-        <a class="resource-card" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/tree/main/PDF">
-          <span class="card-number">03</span>
-          <span class="card-title">Partes instrumentais</span>
-          <span class="card-link">Explorar PDFs <span aria-hidden="true">↗</span></span>
-        </a>
-        <a class="resource-card" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/tree/main/Lilypond">
-          <span class="card-number">04</span>
-          <span class="card-title">Fontes LilyPond</span>
-          <span class="card-link">Ver código-fonte <span aria-hidden="true">↗</span></span>
-        </a>
+    <section class="viewer-section section-width" id="partituras">
+      <div class="section-heading viewer-heading">
+        <div><div class="section-label">02 / Visualizador</div><h2 id="viewer-title">Oscar Guerreiro <span>· Grade geral</span></h2></div>
+        <a id="download-link" class="text-link" href="https://github.com/ProjetoResgate/Oscar-Guerreiro/blob/main/PDF/Grade.pdf?raw=1" target="_blank" rel="noopener">Abrir em nova aba ↗</a>
       </div>
+      <div class="pdf-shell">
+        <div class="pdf-toolbar"><span class="pdf-dot"></span><span id="viewer-label">Pré-visualização da partitura</span><span class="pdf-format">PDF</span></div>
+        <iframe id="pdf-viewer" title="Visualizador de partitura em PDF" src="https://github.com/ProjetoResgate/Oscar-Guerreiro/blob/main/PDF/Grade.pdf?raw=1"></iframe>
+      </div>
+      <p class="viewer-note">O visualizador depende do suporte a PDF do navegador. Em celulares, use “Abrir em nova aba” para uma leitura ampliada.</p>
     </section>
 
-    <section class="instruments section-width">
-      <div class="section-label">03 / Instrumentação</div>
-      <div class="instrument-content">
-        <h2>Para madeiras,<br>metais e percussão.</h2>
-        <p>Flauta, flautim, oboé, fagote, clarinetas, requinta, clarone, saxofones, trompetes, trombones, trompas, tubas, bombardinos e percussão.</p>
-      </div>
-    </section>
-
-    <section class="credits section-width">
-      <div>
-        <p class="eyebrow">Preservação e execução musical</p>
-        <h2>Feito com<br>software livre.</h2>
-      </div>
-      <div class="credit-copy">
-        <p>As partituras foram preparadas com <a href="https://lilypond.org/">GNU LilyPond</a> 2.22.2. Os arquivos-fonte permanecem disponíveis para estudo, revisão e continuidade do trabalho editorial.</p>
-        <a class="text-link" href="https://github.com/projetoresgate/projetoresgate.github.io">Visitar repositório no GitHub <span aria-hidden="true">↗</span></a>
-      </div>
+    <section class="about section-width">
+      <div class="section-label">03 / Sobre o acervo</div>
+      <div class="about-copy"><h2>Memória em<br>formato aberto.</h2><p>O Projeto Resgate reúne edições digitais de obras brasileiras para preservação e execução musical. Cada repositório mantém os PDFs prontos para uso e os arquivos-fonte para estudo e continuidade editorial.</p><a class="text-link" href="https://github.com/ProjetoResgate">Explorar todos os repositórios ↗</a></div>
     </section>
   </main>
 
-  <footer class="footer section-width">
-    <span>Projeto Resgate · Rio de Janeiro</span>
-    <span>CC BY-SA 4.0</span>
-  </footer>
+  <footer class="footer section-width"><span>Projeto Resgate · Acervo aberto</span><span>Partituras e fontes para a próxima execução</span></footer>
 </body>
 </html>
